@@ -1,0 +1,37 @@
+Script started on Sat 12 Sep 2020 05:36:20 PM PDT
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[?1034h[king197@empress 02_HW_01_01_Stack]$ g++ stack.cpp client1.cpp
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 34+
+result = 7
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 345+*
+result = 27
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 722+-
+result = 3
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 34+56++
+result = 18
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 12+34*45+-+
+result = 6
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 1234567891234
+ERROR: overflow occurred - expression is too long.
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: +
+ERROR: underflow occured - too few operands/numbers.
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ 3+[K[K./a.out
+type a postfix expression: 3+
+ERROR: underflow occured - too few operands/numbers.
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 3#
+ERROR: invalid element.
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ ./a.out
+type a postfix expression: 2345+
+result = 9
+Incomplete expression found - stack is not empty.
+]0;king197@empress:~/cs311files/02_HW_01_01_Stack[king197@empress 02_HW_01_01_Stack]$ exit
+exit
+
+Script done on Sat 12 Sep 2020 05:37:49 PM PDT

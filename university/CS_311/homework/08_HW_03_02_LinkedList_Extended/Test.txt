@@ -1,0 +1,45 @@
+Script started on Sun 25 Oct 2020 11:02:38 PM PDT
+]0;king197@empress:~/cs311files/hw3/02[?1034h[king197@empress 02]$ g++ HW3P2clin[Kent.cpp llist.cpp slist.cpp
+]0;king197@empress:~/cs311files/hw3/02[king197@empress 02]$ ./a.out
+calling the llist constructor...
+slist constructor: 
+Step 1 addFront
+Step 2 addRear
+Step 3
+[ 4 6 7 8 ]
+Count: 4
+Step 4
+Found 6 in location 2
+Step 5 replace 6
+Step 6
+[ 4 0 7 8 ]
+Count: 4
+Step 7
+Found 8 in location 4
+Step 8 replace 8
+Step 9
+[ 4 0 7 2 ]
+Count: 4
+Step 10
+Found 5 in location 4
+Step 11 replace 7
+ERROR: Bad position was given
+calling the llist destructor...
+---- First Part testing done ----- 
+calling the llist constructor...
+slist constructor: 
+calling the llist constructor...
+slist constructor: 
+true
+false
+false
+true
+false
+false
+false
+calling the llist destructor...
+calling the llist destructor...
+]0;king197@empress:~/cs311files/hw3/02[king197@empress 02]$ exit
+exit
+
+Script done on Sun 25 Oct 2020 11:03:06 PM PDT

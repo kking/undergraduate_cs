@@ -1,0 +1,188 @@
+Lab #7 - Machine Language Jumps
+
+Recall the two Assembly Instructions, A and C:
+
+The A-instruction
+Syntax: @value
+- value is either a non-negative decimal constant, or 
+- a symbol referring to such a constant.
+Semantics:
+- Sets the A register to value
+- Side effect: RAM[A] becomes the selected RAM register
+
+The C-instruction
+Syntax: dest = comp ; jump (dest and jump are optional)
+- comp = 0, 1, -1, D, A, !D, !A, -D, -A, D+1, A+1, D-1, A-1,
+	 D+A, D-A, A-D, D&A, D|A, M, !M, -M, M+1, M-1, D+M, 
+	 D-M, M-D, D&M, D|M
+- dest = null, M, D, MD, A, AM, AD, AMD (M refers to RAM[A])
+- jump = null, JGT, JEQ, JGE, JLT, JNE, JLE, JMP
+Semantics:
+- Compute the value of comp
+- Stores the result in dest
+- If the Boolean expression (comp jump 0) is true, jumps to
+  execute the instruction stored in ROM[A]
+
+=============================================
+=============================================
+PART I: Translate the following into Hack   =
+Assembly Language                           =
+=============================================
+1. goto 50
+=============================================
+@50	// A = 50
+0;JMP	// PC = ROM[A]
+
+
+=============================================
+2. if D==0 goto 112
+=============================================
+@112	// A = 112, address to jump
+D;JEQ	// if D == 0, PC = ROM[112]; else PC++
+
+
+=============================================
+3. if D<9 goto 507
+=============================================
+@9		// A = 9
+D = D - A	// D = D - 9 
+@507		// A = 507
+D;JLT		// if D < 0, PC = ROM[507]; else PC++
+
+
+=============================================
+4. if RAM[12]>0 goto 50
+=============================================
+@12	// A = 12
+D = M	// D = RAM[12]
+@50	// A = 50
+D;JGT	// if D > 0, PC = ROM[50]; else PC++
+
+
+=============================================
+5. if sum>0 goto END
+=============================================
+@sum	// A = sum, RAM location
+D = M	// D = RAM[sum]
+@END	// A = END, ROM location
+D;JGT	// if D > 0, PC = ROM[END]; else PC++
+
+
+=============================================
+6. if x[i]<=0 goto NEXT
+=============================================
+@x		// A = x
+D = M		// D = RAM[x], address of x[0]
+@i		// A = i
+A = D + A	// A = RAM[x] + i, address of x[i]
+D = M		// D = RAM[RAM[x] + i]
+
+@NEXT		// A = NEXT
+D;JLE		// if RAM[RAM[x] + i] <= 0, PC = ROM[NEXT], else PC++
+
+
+=============================================
+=============================================
+PART II: 
+=============================================
+1. n = 5;
+   for (i = 1; i <= n; i++)
+   {
+        // loop body
+	// ...
+   }
+=============================================
+// set n to 5
+@5		// A = 5
+D = A		// D = 5
+@n		// A = n
+M = D		// RAM[n] = 5
+
+// initialize i for loop to 1 for loop
+@i		// A = i
+M = 1		// RAM[i] = 1
+
+(LOOP)
+  // loop body
+  // ...
+
+  // increment RAM[i]
+  @i		// A = i
+  MD = M + 1	// RAM[i] = RAM[i] + 1, D = RAM[i] + 1
+
+  // compare RAM[n] - RAM[i]; goto LOOP if difference is >= 0
+  @n		// A = n
+  D = M - D	// D = RAM[n] - RAM[i]
+  @LOOP		// A = LOOP
+  D;JGE		// goto LOOP if RAM[n] - RAM[i] >= 0
+
+
+=============================================
+2. sum = 0;
+   n = 5;
+   for (i = 1; i <= n; i++)
+   {
+       sum += i;
+   }
+=============================================
+// initialize sum to 0
+@sum		// A = sum
+M = 0;		// RAM[sum] = 0;
+
+// set n to 5
+@5		// A = 5
+D = A		// D = 5
+@n		// A = n
+M = D		// RAM[n] = 5
+
+// initialize i to 1 for loop
+@i		// A = i
+M = 1		// RAM[i] = 1
+
+(LOOP)
+  // add RAM[i] to RAM[sum]
+  @i		// A = i
+  D = M		// D = RAM[i]
+  @sum		// A = sum
+  M = M + D	// RAM[sum] = RAM[sum] + RAM[i]
+
+  // increment RAM[i]
+  @i		// A = i
+  MD = M + 1	// D = RAM[i] + 1, RAM[i] = RAM[i] + 1
+
+  // compare RAM[n] - RAM[i]; if result >= 0, goto LOOP
+  @n		// A = n
+  D = M - D	// D = RAM[n] - RAM[i] + 1
+  @LOOP		// A = LOOP
+  D;JGE		// ROM = LOOP if RAM[n] - RAM[i] >= 0
+
+
+=============================================
+3. for (i = 0; i < n; i++)
+   {
+       arr[i] = -1;
+   }
+=============================================
+// n is already some value
+
+// initialize i to 0 for loop
+@i		// A = i
+M = 0		// RAM[i] = 0
+
+(LOOP)
+  // obtain address of arr[i]
+  @arr		// A = arr
+  D = M		// D = vArr
+  @i		// A = i
+  A = D + A	// A = vArr + i
+  M = -1	// RAM[vArr + i]
+
+  // increment RAM[i] **
+  @i		// A = i
+  MD = M + 1	// RAM[i] = RAM[i] + 1, D = RAM[i] + 1
+
+  // compare RAM[n] - RAM[i]; goto LOOP if difference < 0 **
+  @n		// A = n
+  D = M - D	// D = RAM[n] - RAM[i] + 1
+  @LOOP		// A = LOOP
+  D;JGT		// goto LOOP if D = ... > 0

@@ -1,0 +1,4 @@
+# CS112
+Fall 2017 coursework for Introduction to Computer Science II: Java at MiraCosta college.
+
+**Course Description**: This course is a continuation of CS 111 - beginning Java. Students will explore advanced Computer Science concepts such as linked lists, vectors, exception handling, basic recursion and input/output (I/O) objects using the Java language. The student will learn the difference between a java application and a Java Applet, and the relationship between an applet and HTML (HypertextMarkupLanguage). Applets will be designed for the web using Java swing components, graphics objects, layout managers, and menu components.Students will continue to apply the basic concepts of object-oriented programming, namely, encapsulation, inheritance and polymorphism in designing user-defined classes and coding programs incorporating control structures, graphical elements and more complex data structures such as linked lists.

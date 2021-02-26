@@ -1,0 +1,22 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+
+// File name: projects/01/Not.hdl
+// Date last modified: 24 January, 2019
+
+/**
+ * Not gate:
+ * out = 1 if (in == 0)
+ *       0 otherwise
+ */
+
+CHIP Not {
+    // Chip interface
+    IN in;
+    OUT out;
+
+    // Chip implementation
+    PARTS:
+    Nand(a=in, b=in, out=out);
+}

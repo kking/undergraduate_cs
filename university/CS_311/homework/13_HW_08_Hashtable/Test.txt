@@ -1,0 +1,131 @@
+Script started on Mon 30 Nov 2020 03:58:14 AM PST
+]0;king197@empress:~/cs311files/hw8[?1034h[king197@empress hw8]$ g++ *.cpp
+]0;king197@empress:~/cs311files/hw8[king197@empress hw8]$ ./a.out
+Enter a key: 0
+Enter a name: Ali
+Enter a key: 9
+Enter a name: Nahid
+Enter a key: 200
+Enter a name: John
+Enter a key: 2147483647
+Enter a name: Simon
+Enter a key: 999
+Enter a name: Aj hman d
+Enter a key: 238
+Enter a name: Nancy
+Enter a key: 23
+Enter a name: YuanYuan    yuan
+Enter a key: 274
+Enter a name: Jacqueline
+Enter a key: 10
+Enter a name: Yanyan
+Enter a key: 237
+Enter a name: Jeremy
+Enter a key: 101
+Enter a name: Mary
+Enter a key: 2147483610
+Enter a name: Sara
+Enter a key: 201
+Enter a name: Steve
+Enter a key: 311
+Enter a name: Youwen
+Enter a key: 348
+Enter a name: Shaun-Inn
+Enter a key: 97
+Enter a name: Xin
+Enter a key: 100
+Enter a name: Rika
+Enter a key: 109
+Enter a name: Xiaoyu
+Enter a key: 47
+Enter a name: Yongje ie
+Enter a key: 57
+Enter a name: Michele le
+
+========== The Hashtable: ==========
+0:[0 Ali 999 Ahmad ]
+1:[empty]
+2:[empty]
+3:[empty]
+4:[empty]
+5:[empty]
+6:[empty]
+7:[empty]
+8:[empty]
+9:[9 Nahid ]
+10:[10 Yanyan 47 Yongjie ]
+11:[empty]
+12:[empty]
+13:[empty]
+14:[empty]
+15:[200 John 274 Jacqueline 237 Jeremy 311 Youwen 348 Shaun-Inn ]
+16:[238 Nancy 201 Steve ]
+17:[empty]
+18:[empty]
+19:[empty]
+20:[57 Michelle ]
+21:[2147483647 Simon 2147483610 Sara ]
+22:[empty]
+23:[23 Yuanyuan 97 Xin ]
+24:[empty]
+25:[empty]
+26:[100 Rika ]
+27:[101 Mary ]
+28:[empty]
+29:[empty]
+30:[empty]
+31:[empty]
+32:[empty]
+33:[empty]
+34:[empty]
+35:[109 Xiaoyu ]
+36:[empty]
+====================================
+Look for? 200
+Found 200: 200 John
+Look for? 238
+Found 238: 238 Nancy
+Look for? 99
+99 not found.
+Look for? 30
+30 not found.
+Look for? 348
+Found 348: 348 Shaun-Inn
+Look for? 311
+Found 311: 311 Youwen
+Look for? 237
+Found 237: 237 Jeremy
+Look for? 274
+Found 274: 274 Jacqueline
+Look for? 201
+Found 201: 201 Steve
+Look for? 14
+14 not found.
+Look for? 2147483610
+Found 2147483610: 2147483610 Sara
+Look for? 5
+5 not found.
+Look for? 12
+12 not found.
+Look for? 19
+19 not found.
+Look for? 20
+20 not found.
+Look for? 31
+31 not found.
+Look for? 74
+74 not found.
+Look for? 97
+Found 97: 97 Xin
+Look for? 201
+Found 201: 201 Steve
+Look for? 10  202
+202 not found.
+Look for? 100
+Found 100: 100 Rika
+Look for? -1
+Done.
+]0;king197@empress:~/cs311files/hw8[king197@empress hw8]$ exit
+exit
+
+Script done on Mon 30 Nov 2020 04:02:15 AM PST

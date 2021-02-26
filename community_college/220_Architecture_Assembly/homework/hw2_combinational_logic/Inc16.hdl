@@ -1,0 +1,24 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+
+// File name: Inc16.hdl
+// Programmer: King
+// Date last modified: 11 February, 2019
+
+/**
+ * 16-bit incrementer:
+ * out = in + 1 (arithmetic addition)
+ *
+ * Integer 2's complement addition.
+ * Overvlow is neither detected nor handled.
+ */
+
+CHIP Inc16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    // Adding constant 1 to the input
+    Add16(a=in, b[0]=true, out=out);
+}

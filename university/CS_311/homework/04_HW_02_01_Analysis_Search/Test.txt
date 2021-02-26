@@ -1,0 +1,51 @@
+Script started on Sat 26 Sep 2020 11:21:10 PM PDT
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[?1034h[king197@empress 04_HW_02_01_Analysis_Search]$ g++ binsearch.cpp
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 1
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 1
+binarySearch: comparing against an element in slot 0
+> Found element 1 in position 1
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 19
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 7
+binarySearch: comparing against an element in slot 8
+binarySearch: comparing against an element in slot 9
+> Found element 19 in position 10
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 5
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 1
+binarySearch: comparing against an element in slot 2
+> Found element 5 in position 3
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 17
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 7
+binarySearch: comparing against an element in slot 8
+> Found element 17 in position 9
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 21
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 7
+binarySearch: comparing against an element in slot 8
+binarySearch: comparing against an element in slot 9
+> Element 21 not found
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 0
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 1
+binarySearch: comparing against an element in slot 0
+> Element 0 not found
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ ./a.out
+> What do you want to look for? 6
+binarySearch: comparing against an element in slot 4
+binarySearch: comparing against an element in slot 1
+binarySearch: comparing against an element in slot 2
+binarySearch: comparing against an element in slot 3
+> Element 6 not found
+]0;king197@empress:~/cs311files/04_HW_02_01_Analysis_Search[king197@empress 04_HW_02_01_Analysis_Search]$ exit
+exit
+
+Script done on Sat 26 Sep 2020 11:22:12 PM PDT

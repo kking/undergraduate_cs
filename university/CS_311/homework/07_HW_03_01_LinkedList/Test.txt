@@ -1,0 +1,111 @@
+Script started on Sun 18 Oct 2020 11:51:25 PM PDT
+]0;king197@empress:~/cs311files/part_1[?1034h[king197@empress part_1]$ g++ llist.h llist.cppls[Kcd part_1ls[Kg++ llist.h llist.cpp HW3P1client.cpp
+]0;king197@empress:~/cs311files/part_1[king197@empress part_1]$ ./a.out
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===>1
+CASE 1: Basic --------------- 
+calling the llist constructor...
+Step 1
+List is empty.
+Step 2
+[ empty ]
+Step 3: adding 1, 2, 3, 4.
+Step 4
+[ 1 2 3 4 ]
+Step 5 deleteFront twice
+Removed: 1
+Step 6
+[ 3 4 ]
+Step 7
+List is not empty.
+Step 8 deleteRear twice
+Removed: 4
+Removed: 3
+Step 9
+List is empty.
+calling the llist destructor...
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===>2
+Case 2: Insert and Delete ------------
+calling the llist constructor...
+Step 1 addFront 9 8 6 5
+Step 2
+[ 5 6 8 9 ]
+Step 3 insert first 4
+Step 4 insert 4th 7
+Step 5 insert 7th 10
+[ 4 5 6 7 8 9 10 ]
+Step 6 insert 9th
+Step7 insert 0th
+Error OutOfRange: insertion attempted out of range.
+Step 8
+[ 4 5 6 7 8 9 12 ]
+Step 9 delete 1st
+removed 4
+Step 10 delete 6th
+Segmentation fault
+]0;king197@empress:~/cs311files/part_1[king197@empress part_1]$ ./a.out
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===>3
+Case 3: Copy Constructor and = -------
+calling the llist constructor...
+calling the llist constructor...
+Step1
+L1: [ 1 2 3 4 5 ]
+Step2
+in copy test
+[ 1 2 3 4 5 6 ]
+finished copy test
+calling the llist destructor...
+-- After copytest --- 
+3
+L1: [ 1 2 3 4 5 ]
+-- Testing operator overloading ---
+Step 4 Gets
+Step 5
+L1: [ 1 2 3 4 5 ]
+Step 6
+Step 7
+L2: [ 7 8 9 10 ]
+Step 8 Gets
+Step 9
+L2: [ 1 2 3 4 5 ]
+Step 10
+Step 11
+L1 :[ 1 2 3 4 ]
+Step 12
+L1: [ 1 2 3 4 ]
+Step 13
+L2: [ 1 2 3 4 5 ]
+calling the llist destructor...
+calling the llist destructor...
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===>0
+]0;king197@empress:~/cs311files/part_1[king197@empress part_1]$ exit
+exit
+
+Script done on Sun 18 Oct 2020 11:52:14 PM PDT

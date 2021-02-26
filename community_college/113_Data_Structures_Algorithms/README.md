@@ -1,0 +1,4 @@
+# CS113
+Spring 2018 coursework for Basic Data Structures and Algorithms at MiraCosta college.
+
+**Course Description**: In this course, students were expected to begin with an initial understanding of the fundamentals of programming. Using Java as the implementation language for solving common programming problems, this course demonstrated the following data structures and algorithms: sorting, searching, hashing, collections, lists, stacks, queues, trees, sets, dictionaries, and graphs. Students were required to utilize and justify the most approriate data structure and algorithm for each assignment based on time and space complexities. Additionally, object-oriented programming techniques, basic design patterns, software development methodoligies (Agile/Scrum), and beginner concepts of a version control system (Git) were introduced throughout the course.

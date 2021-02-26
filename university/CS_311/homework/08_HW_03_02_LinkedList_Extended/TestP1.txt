@@ -1,0 +1,204 @@
+Script started on Sat 24 Oct 2020 11:27:27 PM PDT
+]0;king197@empress:~/cs311files/hw3/01[?1034h[king197@empress 01]$ g++ HW[K[Kllist.c[K[K[K[K[K[K[KHW3P1client.cpp llist.cpp
+]0;king197@empress:~/cs311files/hw3/01[king197@empress 01]$ ./a.out
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===> 1
+CASE 1: Basic --------------- 
+calling the llist constructor...
+Step 1: isEmpty().
+List is empty.
+
+Step 2: displayAll().
+[ empty ]
+Count: 0
+
+Step 3: addRear(int), adding 1, 2, 3, 4.
+
+Step 4: displayAll().
+[ 1 2 3 4 ]
+Count: 4
+
+Step 5: deleteFront(int) twice.
+Removed: 1
+Removed: 2
+
+Step 6: displayAll().
+[ 3 4 ]
+Count: 2
+
+Step 7: isEmpty().
+List is not empty.
+
+Step 8: deleteRear(int) twice.
+Removed: 4
+[ 3 ]
+Count: 1
+Removed: 3
+[ empty ]
+Count: 0
+
+Step 9: isEmpty().
+List is empty.
+calling the llist destructor...
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===> 2
+
+Case 2: Insert and Delete ------------
+calling the llist constructor...
+Step 1: addFront(int), adding 9, 8, 6, 5.
+
+Step 2: displayAll().
+[ 5 6 8 9 ]
+Count: 4
+
+Step 3: insertIth(1, 4), insert 4 at index 1.
+[ 4 5 6 8 9 ]
+Count: 5
+
+Step 4: insertIth(4, 7), insert 7 at index 4.
+[ 4 5 6 7 8 9 ]
+Count: 6
+
+Step 5: insertIth(7, 10), insert 10 at index 7.
+[ 4 5 6 7 8 9 10 ]
+Count: 7
+
+Step 6: insertIth(9, 12), insert 12 at index 9 (out of range).
+Error OutOfRange: insertion attempted out of range.
+
+Step7: insertIth(0, 0), insert 0 at index 0 (out of range).
+Error OutOfRange: insertion attempted out of range.
+
+Step 8: displayAll().
+[ 4 5 6 7 8 9 10 ]
+Count: 7
+
+Step 9: deleteIth(1, int), delete 1st element.
+Removed: 4
+[ 5 6 7 8 9 10 ]
+Count: 6
+
+Step 10: deleteIth(6, int), delete 6th element.
+Removed: 10
+[ 5 6 7 8 9 ]
+Count: 5
+
+Step 11: deleteIth(3, int), delete 3rd element.
+Removed: 7
+[ 5 6 8 9 ]
+Count: 4
+
+Step 12: deleteIth(5, int), delete 5th element (out of range).
+Error OutOfRange: deletion attempted out of range.
+
+Step 13: deleteIth(0, int), delete 0th element (out of range).
+Error OutOfRange: deletion attempted out of range.
+
+Step 14: displayAll().
+[ 5 6 8 9 ]
+Count: 4
+
+Step 15: delete all elements.
+Removed: 9 8 6 5 
+
+Step 16: displayAll().
+[ empty ]
+Count: 0
+
+Step 17: insertIth(0, int), insert element at index 0 (out of range).
+Error OutOfRange: insertion attempted out of range.
+
+Step 18: deleteFront(int), deletion from empty list (underflow).
+Error Underflow: deletion attempted on an empty list.
+
+Step 19: deleteIth(2, int), delete 2nd element (out of range).
+Error OutOfRange: deletion attempted out of range.
+
+Step 20: deleteRear(int), deletion from empty list (underflow).
+Error Underflow: deletion attempted on an empty list.
+calling the llist destructor...
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===> 3
+Case 3: Copy Constructor and = -------
+calling the llist constructor...
+calling the llist constructor...
+Step 1: addRear(int), add 1, 2, 3, 4, 5 to L1.
+L1: [ 1 2 3 4 5 ]
+Count: 5
+
+Step 2: client CopyTest(llist), test copy constructor with L1.
+in copy test
+[ 1 2 3 4 5 6 ]
+Count: 6
+finished copy test
+calling the llist destructor...
+-- After copytest --- 
+
+Step 3: displayAll(), display L1.
+L1: [ 1 2 3 4 5 ]
+Count: 5
+-- Testing operator overloading ---
+
+Step 4: gets, L1 = L1.
+
+Step 5: displayAll(), display L1.
+L1: [ 1 2 3 4 5 ]
+Count: 5
+
+Step 6: addRear(int), add 7, 8, 9, 10 to L2.
+
+Step 7: displayAll(), display L2.
+L2: [ 7 8 9 10 ]
+Count: 4
+
+Step 8: gets, L2 = L1.
+
+Step 9: displayAll(), display L2.
+L2: [ 1 2 3 4 5 ]
+Count: 5
+
+Step 10: deleteRear(int), remove element from L1.
+
+Step 11: displayAll(), display L1.
+L1 :[ 1 2 3 4 ]
+Count: 4
+
+Step 12: displayAll(), display L1.
+L1: [ 1 2 3 4 ]
+Count: 4
+
+Step 13: displayAll(), display L2.
+L2: [ 1 2 3 4 5 ]
+Count: 5
+calling the llist destructor...
+calling the llist destructor...
+
+MENU: These are your options: 
+
+   (1) Case 1  
+   (2) Case 2  
+   (3) Case 3  
+    Enter ( 0 ) to quit 
+===> - 0
+]0;king197@empress:~/cs311files/hw3/01[king197@empress 01]$ exit
+exit
+
+Script done on Sat 24 Oct 2020 11:28:08 PM PDT
